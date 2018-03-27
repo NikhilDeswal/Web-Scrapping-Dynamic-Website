@@ -20,12 +20,15 @@ public class Scrap {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+ 
 		System.setProperty("webdriver.gecko.driver","D:\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.*******.com/Gurgaon/Spa-in-Gurgaon");
 		driver.manage().window().maximize();	
 	    WebDriverWait wait = new WebDriverWait(driver, 30);
+
+                //this will hold the web scrapping untill you get the id that you want by loading
+
 		WebElement ele = wait.until(
 		        ExpectedConditions.visibilityOfElementLocated(By.id("bcard99")));
 		
